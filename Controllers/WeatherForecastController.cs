@@ -43,5 +43,11 @@ namespace Requests_and_Responses.Controllers
     {
       return base.Ok(base.Request.Headers);
     }
+
+    [HttpGet("{Query}")]
+    public IActionResult GetQueryResults()
+    {
+      return base.Ok(base.Request.Query);
+    }
   }
 }
